@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* Nadia */
+
+nav {
+  background-color: #006df0;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  height: 4em;
+  align-items: center;
+}
+
+nav li {
+  text-decoration: none;
+  color: #ffffff;
+  width: auto;
+  float: left;
+  padding: 5px;
+  list-style: none;
+  font-weight: 500;
+}
+
+nav li i {
+  margin-left: 5px;
+}
+
+.Title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CyberTraining {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 80vh;
+  margin-right: 5em;
+}
+
+.CyberTraining h1 {
+  color: #006df0;
+  margin-bottom: 0.3em;
+  font-family: "Poppins", sans-serif;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.CyberTraining p {
+  color: black;
+  font-size: 1.5em;
+  font-family: "Poppins", sans-serif;
+}
+
+.Title-section img {
+  width: 20%;
+  height: auto;
+}
+
+/* Artur */
+
+.vidste-du__section {
+  position: relative;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5em 0 3em 0;
+}
+
+.vidste-du__section h2 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.vidste-du__section p {
+  width: 50%;
+  margin-bottom: 2em;
+}
+
+.vidste-du__section img {
+  width: 50%;
+  margin-top: 2em;
+}
+
+.design {
+  background-color: #006df0;
+  width: 15%;
+  height: 60%;
+  position: relative;
+  position: absolute;
+  left: 0;
+  top: -10%;
+}
+
+.bullet__container {
+  position: absolute;
+  top: 26%;
+  left: 69%;
+  width: 11em;
+  height: 8em;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.bullet {
+  background-color: white;
+  border-radius: 100%;
+  height: 0.85em;
+  width: 0.85em;
+}
+
+@media only screen and (max-width: 800px) {
+  .design {
+    display: none;
+  }
+
+  .vidste-du__section img,
+  .vidste-du__section p {
+    width: 80%;
+  }
+
+  .vidste-du__section {
+    height: 50vh;
+  }
+}
+
+/* Nico */
+
+.quiz__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.quiz__container h2,
+.bundoverskrift {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: #006df0;
+  text-align: center;
+  padding: 20px;
+}
+
+.grid p,
+footer p,
+.bundtekst {
+  font-family: "Poppins", sans-serif;
+  padding: 80px 160px;
+}
+.knap a {
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+  text-decoration: none;
+  color: white;
+  background-color: #006df0;
+  padding: 0.3em 0.8em;
+  font-weight: 500;
+  border-radius: 16px;
+}
+
+.trophy__image {
+  width: 43%;
+  height: auto;
+  margin-bottom: 2em;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid p {
+  width: 25ch;
+  padding: 0;
+  font-weight: 500;
+}
+
+.image__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sidste side */
+.passwordtjekker {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bundoverskrift {
+  color: white;
+  margin-top: 50px;
+}
+.bundtekst {
+  color: white;
+  font-style: normal;
+}
+
+.password__input {
+  width: 35%;
+  height: 3em;
+  padding: 2em;
+  border-radius: 16px;
+  font-size: 1.3em;
+  margin-bottom: 1.6em;
+}
+
+.tjek__submit {
+  background-color: #006df0;
+  color: white;
+  border: none;
+  padding: 0.3em 1.4em;
+  font-size: 2em;
+  font-weight: 600;
+  border-radius: 16px;
+  margin-bottom: 2em;
+}
+
+/* Footer */
+footer {
+  background-color: #006df0;
+}
+
+.footertekst {
+  color: white;
+  text-align: center;
+  padding: 50px 160px;
+}

@@ -22,8 +22,9 @@ nav {
   display: flex;
   justify-content: center;
   font-family: "Poppins", sans-serif;
-  height: 4em;
+  height: 3.6em;
   align-items: center;
+  font-size: 1.4em;
 }
 
 nav li {
@@ -152,7 +153,6 @@ nav li i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
 }
 
 .quiz__container h2,
@@ -161,15 +161,14 @@ nav li i {
   text-transform: uppercase;
   color: #006df0;
   text-align: center;
-  padding: 20px;
 }
-
+/* 
 .grid p,
 footer p,
 .bundtekst {
   font-family: "Poppins", sans-serif;
   padding: 80px 160px;
-}
+} */
 .knap a {
   font-family: "Poppins", sans-serif;
   font-size: 2em;
@@ -182,24 +181,31 @@ footer p,
 }
 
 .trophy__image {
-  width: 43%;
+  width: 50%;
   height: auto;
   margin-bottom: 2em;
 }
 
-.grid {
+.quiz__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.grid p {
-  width: 25ch;
+.quiz__container h2 {
+  margin-top: 1.6em;
+}
+
+.quiz__wrapper p {
+  width: 20ch;
   padding: 0;
   font-weight: 500;
+  display: block;
 }
 
 .image__container {
+  margin-bottom: 4em;
+  margin-top: 3.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,14 +219,17 @@ footer p,
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .bundoverskrift {
   color: white;
-  margin-top: 50px;
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 .bundtekst {
   color: white;
   font-style: normal;
+  width: 50ch;
 }
 
 .password__input {
@@ -229,7 +238,8 @@ footer p,
   padding: 2em;
   border-radius: 16px;
   font-size: 1.3em;
-  margin-bottom: 1.6em;
+  margin-bottom: 1em;
+  margin-top: 2em;
 }
 
 .tjek__submit {
@@ -243,13 +253,44 @@ footer p,
   margin-bottom: 2em;
 }
 
+.design2 {
+  background-color: #006df0;
+  width: 10%;
+  height: 60%;
+  position: relative;
+  position: absolute;
+  right: 0;
+  top: -10%;
+}
+
+.bullet__container2 {
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  width: 11em;
+  height: 8em;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.bullet {
+  background-color: white;
+  border-radius: 100%;
+  height: 0.85em;
+  width: 0.85em;
+}
+
 /* Footer */
 footer {
   background-color: #006df0;
-}
-
-.footertekst {
   color: white;
-  text-align: center;
-  padding: 50px 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  padding: 0.8em;
+}
+footer i {
+  margin-right: 0.3em;
 }

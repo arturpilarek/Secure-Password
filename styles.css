@@ -7,6 +7,10 @@
   font-family: "Poppins";
 }
 
+body {
+  background-color: white;
+}
+
 h2 {
   font-size: 30px;
 }
@@ -111,6 +115,7 @@ nav li i {
   position: absolute;
   left: 0;
   top: -10%;
+  z-index: 3;
 }
 
 .bullet__container {
@@ -146,7 +151,52 @@ nav li i {
   }
 }
 
-/* Nico */
+/* JS  */
+.modal {
+  display: none;
+}
+
+.overlay__active {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0.7;
+  z-index: 4;
+}
+
+/* Quiz box */
+
+.quiz__box {
+  position: absolute;
+  display: none;
+  height: 80vh;
+  width: 60vh;
+  margin: 0 auto;
+  background-color: #006df0;
+  z-index: 5;
+}
+
+.title__container {
+  text-align: center;
+}
+
+.title__container h2,
+.title__container i {
+  color: white !important;
+  font-weight: 1em;
+}
+
+.title__container i {
+  cursor: pointer;
+}
+
+.question__content {
+  background-color: white;
+  height: 80%;
+}
+
+/* Quiz */
 
 .quiz__container {
   display: flex;
@@ -162,13 +212,11 @@ nav li i {
   color: #006df0;
   text-align: center;
 }
-/* 
-.grid p,
-footer p,
-.bundtekst {
-  font-family: "Poppins", sans-serif;
-  padding: 80px 160px;
-} */
+
+.knap {
+  cursor: pointer;
+}
+
 .knap a {
   font-family: "Poppins", sans-serif;
   font-size: 2em;
@@ -204,7 +252,7 @@ footer p,
 }
 
 .image__container {
-  margin-bottom: 4em;
+  margin-bottom: 7em;
   margin-top: 3.5em;
   display: flex;
   flex-direction: column;
@@ -261,6 +309,7 @@ footer p,
   position: absolute;
   right: 0;
   top: -10%;
+  z-index: 3;
 }
 
 .bullet__container2 {

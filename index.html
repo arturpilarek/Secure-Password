@@ -86,12 +86,22 @@
           <p>Spørgsmål 1 ud af 8</p>
           <div class="question__content">
             <h3>Cyberkriminalitet er kun målrettet mod store virksomheder?</h3>
-            <input type="radio" value="A" />
-            <input type="radio" value="B" />
-            <button>Tjek dit svar</button>
+            <form action="" class="quiz__form">
+              <label for="A">
+                <input type="radio" value="A" id="A" />
+                Sandt</label
+              >
+              <label for="B">
+                <input type="radio" value="B" id="B" />
+                Falsk</label
+              >
+            </form>
+            <div class="quiz-content__button-container">
+              <button>Tjek dit svar</button>
+            </div>
           </div>
         </div>
-        <h2>Tjek din viden om cyber security</h2>
+        <h2 class="quiz__title">Tjek din viden om cyber security</h2>
 
         <div class="quiz__wrapper">
           <p>
@@ -118,8 +128,13 @@
           type="text"
           class="password__input"
           placeholder="MitNyePassword"
+          id="passwordInput"
         />
         <input type="submit" value="Tjek" class="tjek__submit" />
+        <div class="error">
+          <h3>Du har begået følgende fejl:</h3>
+          <ul class="errorListe"></ul>
+        </div>
         <div class="design2">
           <div class="bullet__container2">
             <div class="bullet"></div>

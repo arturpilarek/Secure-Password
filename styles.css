@@ -11,14 +11,6 @@ body {
   background-color: white;
 }
 
-h2 {
-  font-size: 30px;
-}
-
-p {
-  font-size: 20px;
-}
-
 /* Nadia */
 
 nav {
@@ -95,11 +87,13 @@ nav li i {
 .vidste-du__section h2 {
   text-transform: uppercase;
   margin-bottom: 1em;
+  font-size: 30px;
 }
 
 .vidste-du__section p {
   width: 50%;
   margin-bottom: 2em;
+  font-size: 20px;
 }
 
 .vidste-du__section img {
@@ -160,8 +154,7 @@ nav li i {
   position: absolute;
   top: 0;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.75);
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 4;
 }
 
@@ -171,29 +164,91 @@ nav li i {
   position: absolute;
   display: none;
   height: 80vh;
-  width: 60vh;
+  width: 80vh;
   margin: 0 auto;
   background-color: #006df0;
   z-index: 5;
+  opacity: 1;
 }
 
 .title__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  position: relative;
+  margin-top: 1em;
+}
+
+#exitIcon {
+  cursor: pointer;
+}
+
+.quiz__box p {
   text-align: center;
+  color: white;
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  font-weight: 500;
 }
 
 .title__container h2,
 .title__container i {
-  color: white !important;
+  color: white;
   font-weight: 1em;
 }
 
 .title__container i {
   cursor: pointer;
+  position: absolute;
+  right: 1em;
+}
+
+.question__content h3 {
+  padding-top: 1.4em;
+  text-align: center;
+  color: #006df0;
+}
+
+.quiz__form {
+  padding: 4em 0 4em 2em;
+}
+
+.quiz__form label {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.quiz__form input {
+  margin-right: 1em;
+}
+
+.quiz__form label:first-child {
+  padding-bottom: 1em;
 }
 
 .question__content {
   background-color: white;
-  height: 80%;
+  height: 90%;
+  border-radius: 32px 32px 0 0;
+}
+
+.question__content button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.5em 1em;
+  background: linear-gradient(#0081f0 0%, #003778 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.quiz-content__button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Quiz */
@@ -205,7 +260,7 @@ nav li i {
   align-items: center;
 }
 
-.quiz__container h2,
+.quiz__title,
 .bundoverskrift {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
@@ -240,8 +295,9 @@ nav li i {
   justify-content: center;
 }
 
-.quiz__container h2 {
+.quiz__title {
   margin-top: 1.6em;
+  font-size: 30px;
 }
 
 .quiz__wrapper p {
@@ -249,6 +305,7 @@ nav li i {
   padding: 0;
   font-weight: 500;
   display: block;
+  font-size: 20px;
 }
 
 .image__container {
@@ -273,11 +330,13 @@ nav li i {
   color: white;
   margin-top: 3em;
   margin-bottom: 1em;
+  font-size: 30px;
 }
 .bundtekst {
   color: white;
   font-style: normal;
   width: 50ch;
+  font-size: 20px;
 }
 
 .password__input {
@@ -287,7 +346,7 @@ nav li i {
   border-radius: 16px;
   font-size: 1.3em;
   margin-bottom: 1em;
-  margin-top: 2em;
+  margin-top: 1rem;
 }
 
 .tjek__submit {
@@ -298,7 +357,29 @@ nav li i {
   font-size: 2em;
   font-weight: 600;
   border-radius: 16px;
-  margin-bottom: 2em;
+  margin-bottom: 1rem;
+}
+
+/* Error container */
+
+.error {
+  display: none;
+  color: white;
+  background-color: #006df0;
+  border-radius: 32px;
+  width: 35%;
+  text-align: center;
+  padding: 2em;
+  margin-bottom: 1rem;
+}
+
+.error h3 {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.error ul {
+  list-style: none;
 }
 
 .design2 {
@@ -337,7 +418,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5em;
+  font-size: 1.5em;
   padding: 0.8em;
 }
 footer i {

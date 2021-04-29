@@ -153,8 +153,10 @@ nav li i {
 .overlay__active {
   position: absolute;
   top: 0;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  bottom: -215%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 4;
 }
 
@@ -169,6 +171,7 @@ nav li i {
   background-color: #006df0;
   z-index: 5;
   opacity: 1;
+  box-shadow: 0 0 10px 2px;
 }
 
 .title__container {

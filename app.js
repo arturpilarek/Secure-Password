@@ -61,26 +61,24 @@ function checkLength() {
 }
 
 // ! does not work to make negative expression LAILA
+// error: if the first letter is uppercase, will not work properly
 function checkCharacters() {
-  if (/[a-z][A-Z]/.test(passwordInput.value)) {
-    console.log("youreright")
-  } else {
+  if (
+    !/[A-Z][a-z]/.test(passwordInput.value) &&
+    !/[a-z][A-Z]/.test(passwordInput.value)
+  ) {
     ErrorArray.push("Brug blanding af store og smaa bogstaver")
   }
 }
 
 function checkSpecCharacters() {
-  if (/\W/.test(passwordInput.value)) {
-    console.log("youreright")
-  } else {
+  if (!/\W/.test(passwordInput.value)) {
     ErrorArray.push("Overvej at bruge specialtegn")
   }
 }
 
 function checkNumbers() {
-  if (/[0-9]/.test(passwordInput.value)) {
-    console.log("youreright")
-  } else {
+  if (!/[0-9]/.test(passwordInput.value)) {
     ErrorArray.push("Overvej at bruge tal")
   }
 }

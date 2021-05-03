@@ -18,6 +18,7 @@ quizButton.addEventListener("click", () => {
 function triggerModal() {
   overlay.classList.add("overlay__active")
   quizBox.style.display = "block"
+  document.body.style.overflow = "hidden"
 }
 
 exitIcon.addEventListener("click", () => {
@@ -27,7 +28,22 @@ exitIcon.addEventListener("click", () => {
 function closeModal() {
   overlay.classList.remove("overlay__active")
   quizBox.style.display = "none"
+  document.body.style.overflow = "initial"
 }
+
+// Spørgesmål 1
+
+const checkButton1 = document.querySelector(".checkAnswer-1")
+const answers1 = Array.from(document.getElementsByName("question1"))
+
+checkButton1.addEventListener("click", () => {
+  let answers1Filtered = answers1.filter((selectedItem) => {
+    return selectedItem.checked
+  })
+  console.log(answers1Filtered)
+})
+
+function checkAnswer() {}
 
 // Password tjekker
 

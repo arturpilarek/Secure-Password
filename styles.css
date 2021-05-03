@@ -153,7 +153,7 @@ nav li i {
 .overlay__active {
   position: absolute;
   top: 0;
-  bottom: -215%;
+  bottom: -315%;
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
@@ -252,6 +252,12 @@ nav li i {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Quiz Questions JS */
+
+.hide {
+  display: none;
 }
 
 /* Quiz */

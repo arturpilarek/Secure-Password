@@ -12,7 +12,6 @@
     ></script>
     <script src="app.js" defer></script>
   </head>
-  <body>
     <div id="overlay"></div>
       <header>
         <nav>
@@ -83,22 +82,65 @@
             <h2>Cybersecurity quiz</h2>
             <i id="exitIcon" class="fas fa-sign-out-alt"></i>
           </div>
-          <p>Spørgsmål 1 ud af 8</p>
+          <p class="quiz-box__question-number">Spørgsmål 1 ud af 8</p>
           <div class="question__content">
             <h3>Cyberkriminalitet er kun målrettet mod store virksomheder?</h3>
+            <div class="answer__container">
+            <p class="question__content-svar hide"><strong>Det rigtige svar er: </strong></p> <span class="question__content-svar hide answer1"></span>
+          </div>
             <form action="" class="quiz__form">
               <label for="A1">
                 <input type="radio" name="question1" value="A" id="A1" />
                 Sandt</label
               >
               <label for="B1">
-                <input type="radio" name="question1" value="B" id="B1" data-true='true' />
+                <input type="radio" name="question1" value="Btrue" id="B1"  />
                 Falsk</label
               >
             </form>
+            <form class="quiz__form2 hide">
+              <label for="A2">
+                <input type="radio" name="question2" value="A" id="A2" />
+                Kun bogstaver og tal</label
+              >
+              <label for="B2">
+                <input type="radio" name="question2" value="B" id="B2"  />
+                Blanding af store og små bogstaver</label
+              >
+              <label for="C2">
+                <input type="radio" name="question2" value="C" id="C2"  />
+                Specialtegn</label
+              >
+              <label for="D2">
+                <input type="radio" name="question2" value="Dtrue" id="D2"  />
+                Alle de ovenstående</label
+              >
+            </form>
+            <div class="question1__result hide">
+              <p><strong>Små virksomheder udsættes samlet for næsten 10.000 cyberangreb om dagen. </strong><br>
+                Sidste år oplevede var der en stigning på 424% i nye cyber brud på mindre virksomheder, oftest på grund af phishing, malware, ransomware og falske betalingsanmodninger.</p>
+                <img src="assets/question1.png" alt="Hairdresser">
+                <div class="quiz-content__button-container">
+                  <button class="next-question-1">Næste spørgsmål</button>
+                </div>
+            </div>
+            <div class="question2__result hide">
+              <p>Jo mere du blander bogstaver (store og små bogstaver), tal og symboler, jo mere sikkert er dit kodeord, og jo sværere er det for hackere at knække det.</p>
+              <div class="cow__container">
+                <p>Et godt eksempel på et godt password kan være:
+                  <br><br>
+                  UFO-Cow-13-Abduction</p>
+                  <img src="assets/question2.png" alt="Cow">
+              </div>
+                <div class="quiz-content__button-container">
+                  <button class="next-question-2">Næste spørgsmål</button>
+                </div>
+            </div>
             <div class="quiz-content__button-container">
               <button class="checkAnswer-1">Tjek dit svar</button>
+              <button class="checkAnswer-2 hide">Tjek dit svar</button>
             </div>
+
           </div>
         </div>
         <h2  class="quiz__title">Tjek din viden om cyber security</h2>
@@ -169,6 +211,7 @@
         <i class="fas fa-people-carry"></i>
         <p class="footertekst">Lavet af Nicoline, Nadia og Artur</p>
       </footer>
+      
     </div>
   </body>
 </html>

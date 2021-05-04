@@ -10,6 +10,7 @@ const passwordSubmit = document.querySelector(".tjek__submit")
 const errorListe = document.querySelector(".errorListe")
 const errorContainer = document.querySelector(".error")
 var body = document.getElementsByTagName("body")[0]
+let points = 0
 
 let ErrorArray = []
 console.log(errorContainer.firstChild)
@@ -46,7 +47,6 @@ const answers1 = Array.from(document.getElementsByName("question1"))
 const result1 = document.querySelector(".question1__result")
 const answerPresentation1 = document.querySelector(".question__content-svar")
 const answer1 = document.querySelector(".answer1")
-const nextQuestionButton1 = document.querySelector(".next-question-1")
 
 checkButton1.addEventListener("click", () => {
   let answers1Filtered = answers1.filter((selectedItem) => {
@@ -62,6 +62,7 @@ checkButton1.addEventListener("click", () => {
     answerPresentation1.classList.remove("hide")
     answer1.classList.remove("hide")
     answer1.textContent = "Falsk"
+    points++
   } else {
     quizBox.style.backgroundColor = "red"
     quizContent.children[0].textContent = "Desværre, dit svar er forkert"
@@ -81,6 +82,7 @@ const form2 = document.querySelector(".quiz__form2")
 const checkButton2 = document.querySelector(".checkAnswer-2")
 const answers2 = Array.from(document.getElementsByName("question2"))
 const result2 = document.querySelector(".question2__result")
+const nextQuestionButton1 = document.querySelector(".next-question-1")
 
 nextQuestionButton1.addEventListener("click", () => {
   result1.classList.add("hide")
@@ -109,6 +111,7 @@ checkButton2.addEventListener("click", () => {
     answerPresentation1.classList.remove("hide")
     answer1.classList.remove("hide")
     answer1.textContent = "Alle de ovenstående"
+    points++
   } else {
     quizBox.style.backgroundColor = "red"
     quizContent.children[0].textContent = "Desværre, dit svar er forkert"
@@ -120,6 +123,69 @@ checkButton2.addEventListener("click", () => {
     answer1.classList.remove("hide")
     answer1.textContent = "Alle de ovenstående"
   }
+})
+
+// // Spørgesmål 3
+
+const form3 = document.querySelector(".quiz__form3")
+const checkButton3 = document.querySelector(".checkAnswer-3")
+const answers3 = Array.from(document.getElementsByName("question3"))
+const nextQuestionButton2 = document.querySelector(".next-question-2")
+const result3 = document.querySelector(".question3__result")
+
+nextQuestionButton2.addEventListener("click", () => {
+  result2.classList.add("hide")
+  answer1.classList.add("hide")
+  answerPresentation1.classList.add("hide")
+  quizContent.children[0].style.color = "#006df0"
+  quizContent.children[0].innerHTML =
+    "Hvor lang skal en stærk adgangskode være?"
+  questionNumber.innerHTML = "Spørgsmål 3 ud af 8"
+  quizBox.style.backgroundColor = "#006df0"
+  form3.classList.remove("hide")
+  checkButton3.classList.remove("hide")
+})
+
+checkButton3.addEventListener("click", () => {
+  let answers1Filtered = answers3.filter((selectedItem) => {
+    return selectedItem.checked
+  })
+  if (answers1Filtered[0].value === "B3true") {
+    quizBox.style.backgroundColor = "green"
+    quizContent.children[0].textContent = "Tillykke, dit svar er rigtigt!"
+    quizContent.children[0].style.color = "green"
+    form3.classList.add("hide")
+    checkButton3.classList.add("hide")
+    result3.classList.remove("hide")
+    answerPresentation1.classList.remove("hide")
+    answer1.classList.remove("hide")
+    answer1.textContent = "Så lang som muligt"
+    points++
+  } else {
+    quizBox.style.backgroundColor = "red"
+    quizContent.children[0].textContent = "Desværre, dit svar er forkert"
+    quizContent.children[0].style.color = "red"
+    form3.classList.add("hide")
+    checkButton3.classList.add("hide")
+    result3.classList.remove("hide")
+    answerPresentation1.classList.remove("hide")
+    answer1.classList.remove("hide")
+    answer1.textContent = "Så lang som muligt"
+  }
+})
+
+// Show results
+const checkResultsButton = document.querySelector(".show-results")
+const quizContainer = document.querySelector(".quiz__container")
+const resultsTemplate = document.querySelector("#resultsTemplate")
+
+checkResultsButton.addEventListener("click", () => {
+  quizContainer.remove()
+  let resultatetContainer = document.createElement("section")
+  document.body.appendChild(resultatetContainer)
+  resultatetContainer.classList.add("results-container")
+  resultatetContainer.append(resultsTemplate.content.cloneNode(true))
+  resultatetContainer.children[2].innerText = `Du har fået ${points} ud af 8 rigtige`
 })
 
 // Password tjekker

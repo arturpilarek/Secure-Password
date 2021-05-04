@@ -88,6 +88,7 @@
             <div class="answer__container">
             <p class="question__content-svar hide"><strong>Det rigtige svar er: </strong></p> <span class="question__content-svar hide answer1"></span>
           </div>
+            <!-- Spørgesmål 1 form -->
             <form action="" class="quiz__form">
               <label for="A1">
                 <input type="radio" name="question1" value="A" id="A1" />
@@ -97,7 +98,9 @@
                 <input type="radio" name="question1" value="Btrue" id="B1"  />
                 Falsk</label
               >
+              
             </form>
+             <!-- Spørgesmål 2 form -->
             <form class="quiz__form2 hide">
               <label for="A2">
                 <input type="radio" name="question2" value="A" id="A2" />
@@ -114,6 +117,21 @@
               <label for="D2">
                 <input type="radio" name="question2" value="Dtrue" id="D2"  />
                 Alle de ovenstående</label
+              >
+            </form>
+            <!-- Spørgesmål 3 form -->
+            <form class="quiz__form3 hide">
+              <label for="A3">
+                <input type="radio" name="question3" value="A" id="A3" />
+                8 tegn</label
+              >
+              <label for="B3">
+                <input type="radio" name="question3" value="B3true" id="B3"  />
+                Så lang som muligt</label
+              >
+              <label for="C3">
+                <input type="radio" name="question3" value="C" id="C3"  />
+                Det er ligemeget</label
               >
             </form>
             <div class="question1__result hide">
@@ -136,9 +154,18 @@
                   <button class="next-question-2">Næste spørgsmål</button>
                 </div>
             </div>
+            <div class="question3__result hide">
+              <p><strong>Du skal vælge en adgangskode, der er lang nok.</strong>
+                Der er ingen minimum adgangskode længde, som alle er enige om, men du bør generelt vælge adgangskoder, der er mindst 12 til 14 tegn lange. En længere adgangskode ville være endnu bedre.</p>
+                <img src="assets/question3.png" alt="Hairdresser">
+                <div class="quiz-content__button-container">
+                  <button class="show-results">Se resultatet</button>
+                </div>
+            </div>
             <div class="quiz-content__button-container">
               <button class="checkAnswer-1">Tjek dit svar</button>
               <button class="checkAnswer-2 hide">Tjek dit svar</button>
+              <button class="checkAnswer-3 hide">Tjek dit svar</button>
             </div>
 
           </div>
@@ -206,6 +233,22 @@
           </div>
         </div>
       </section>
+      <template id="resultsTemplate">
+        <h2>Tillykke!</h2>
+        <p>Du har lige gennemført quizzen omkring sikre password </p>
+        <span>Du har fået 3 ud af 8 rigtige</span>
+        <img src="assets/results.png" alt="Succes image">
+        <div class="results__name-input">
+          <p>Skriv dit navn her: 
+            og få et diplom</p>
+            <input type="text">
+        </div>
+        <button>Får dit diplom her</button>
+        <div class="results__button-container">
+          <button>Gentag quizzen</button>
+          <button>Tilbage til forside</button>
+        </div>
+      </template>
 
       <footer>
         <i class="fas fa-people-carry"></i>

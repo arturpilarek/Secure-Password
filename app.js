@@ -1,47 +1,31 @@
 const quizButton = document.querySelector(".knap")
 const overlay = document.querySelector("#overlay")
-const quizBox = document.querySelector("#quiz__box")
+const quizBox = document.querySelector(".quiz__box")
 const quizContent = document.querySelector(".question__content")
 const exitIcon = document.querySelector("#exitIcon")
 const questionNumber = document.querySelector(".quiz-box__question-number")
-// Password variables
-const passwordInput = document.querySelector("#passwordInput")
-const passwordSubmit = document.querySelector(".tjek__submit")
-const errorListe = document.querySelector(".errorListe")
-const errorContainer = document.querySelector(".error")
 var body = document.getElementsByTagName("body")[0]
+// points tæller
 let points = 0
 
-let ErrorArray = []
-console.log(errorContainer.firstChild)
-
 quizButton.addEventListener("click", () => {
-  triggerModal()
-})
-
-function triggerModal() {
   overlay.classList.add("overlay__active")
   quizBox.style.display = "block"
   document.body.style.overflow = "hidden"
   document.body.scrollTop = 0
   document.documentElement.scrollTop = 0
-}
+})
 
 //
 
 exitIcon.addEventListener("click", () => {
-  closeModal()
-})
-
-function closeModal() {
   overlay.classList.remove("overlay__active")
   quizBox.style.display = "none"
   document.body.style.overflow = "initial"
-}
+})
 
 // Spørgesmål 1
 const form1 = document.querySelector(".quiz__form")
-
 const checkButton1 = document.querySelector(".checkAnswer-1")
 const answers1 = Array.from(document.getElementsByName("question1"))
 const result1 = document.querySelector(".question1__result")
@@ -180,15 +164,42 @@ const quizContainer = document.querySelector(".quiz__container")
 const resultsTemplate = document.querySelector("#resultsTemplate")
 
 checkResultsButton.addEventListener("click", () => {
-  quizContainer.remove()
+  quizBox.style.display = "none"
   let resultatetContainer = document.createElement("section")
   document.body.appendChild(resultatetContainer)
   resultatetContainer.classList.add("results-container")
   resultatetContainer.append(resultsTemplate.content.cloneNode(true))
-  resultatetContainer.children[2].innerText = `Du har fået ${points} ud af 8 rigtige`
+  resultatetContainer.children[2].innerText = `Du har fået ${points} ud af 3 rigtige`
+  const exitQuizButton = document.querySelector(".exitQuizButton")
+  exitQuizButton.addEventListener("click", () => {
+    overlay.classList.remove("overlay__active")
+    resultatetContainer.remove()
+    document.body.style.overflow = "initial"
+  })
+  const quizAgainButton = document.querySelector(".quizAgainButton")
+  quizAgainButton.addEventListener("click", showFirstQuestion())
 })
 
+function showFirstQuestion() {
+  quizBox.style.display = "block"
+  quizBox.style.backgroundColor = "blue"
+  quizContent.children[0].textContent =
+    "Cyberkriminalitet er kun målrettet mod store virksomheder?"
+  quizContent.children[0].style.color = "#006DF0"
+  result3.classList.add("hide")
+  answerPresentation1.classList.add("hide")
+  answer1.classList.add("hide")
+  points = 0
+}
+
 // Password tjekker
+
+const passwordInput = document.querySelector("#passwordInput")
+const passwordSubmit = document.querySelector(".tjek__submit")
+const errorListe = document.querySelector(".errorListe")
+const errorContainer = document.querySelector(".error")
+// Tømt array, som vil være fyldt med error strings, når fejl er begået
+let ErrorArray = []
 
 passwordSubmit.addEventListener("click", () => {
   clearErrors()
@@ -219,8 +230,6 @@ function checkLength() {
   }
 }
 
-// ! does not work to make negative expression LAILA
-// error: if the first letter is uppercase, will not work properly
 function checkCharacters() {
   if (
     !/[A-Z][a-z]/.test(passwordInput.value) &&

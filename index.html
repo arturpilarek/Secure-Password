@@ -22,7 +22,7 @@
           </ul>
         </nav>
       </header>
-
+      <!-- hero section -->
       <section class="Title-section">
         <div class="CyberTraining">
           <h1>
@@ -33,6 +33,7 @@
         </div>
         <img src="assets/Card.png" alt="Card" />
       </section>
+      <!-- vidste du section -->
       <section class="vidste-du__section">
         <h2>Vidste du at...</h2>
         <p>
@@ -76,7 +77,7 @@
         </div>
       </section>
       <section class="quiz__container">
-        <!-- Quiz box -->
+        <!-- Quiz box, popup -->
         <div id="quiz__box" class="quiz__box">
           <div class="title__container">
             <h2>Cybersecurity quiz</h2>
@@ -134,6 +135,7 @@
                 Det er ligemeget</label
               >
             </form>
+            <!-- Faktaboks 1 -->
             <div class="question1__result hide">
               <p><strong>Små virksomheder udsættes samlet for næsten 10.000 cyberangreb om dagen. </strong><br>
                 Sidste år oplevede var der en stigning på 424% i nye cyber brud på mindre virksomheder, oftest på grund af phishing, malware, ransomware og falske betalingsanmodninger.</p>
@@ -142,6 +144,7 @@
                   <button class="next-question-1">Næste spørgsmål</button>
                 </div>
             </div>
+            <!-- Faktaboks 2 -->
             <div class="question2__result hide">
               <p>Jo mere du blander bogstaver (store og små bogstaver), tal og symboler, jo mere sikkert er dit kodeord, og jo sværere er det for hackere at knække det.</p>
               <div class="cow__container">
@@ -154,6 +157,7 @@
                   <button class="next-question-2">Næste spørgsmål</button>
                 </div>
             </div>
+            <!-- Faktaboks 3 -->
             <div class="question3__result hide">
               <p><strong>Du skal vælge en adgangskode, der er lang nok.</strong>
                 Der er ingen minimum adgangskode længde, som alle er enige om, men du bør generelt vælge adgangskoder, der er mindst 12 til 14 tegn lange. En længere adgangskode ville være endnu bedre.</p>
@@ -170,12 +174,13 @@
 
           </div>
         </div>
+        <!-- Åbn quiz section -->
         <h2  class="quiz__title">Tjek din viden om cyber security</h2>
 
         <div class="quiz__wrapper">
           <p >
             Løs quizzen og find ud af om du har styr på sikkerhed omkring
-            passwords. Læs faktaboksene for at få en bedre forståelse omkring
+            passwords. Læs faktaboksene efter hvert spørgsmål for at få en bedre forståelse omkring
             cybersecurity.
           </p>
           <div class="image__container">
@@ -185,7 +190,7 @@
           </div>
         </div>
       </section>
-
+      <!-- Passwordtjekker -->
       <section class="passwordtjekker">
         <h2 class="bundoverskrift">Tjek om dit nyt password er sikkert</h2>
         <p class="bundtekst">
@@ -200,6 +205,7 @@
           id="passwordInput"
         />
         <input type="submit" value="Tjek" class="tjek__submit" />
+        <!-- Error liste container -->
         <div class="error">
           <h3>Du har begået følgende fejl:</h3>
           <ul class="errorListe"></ul>
@@ -233,6 +239,7 @@
           </div>
         </div>
       </section>
+      <!-- Template, som bliver brugt til at fylde results container js linje:186 -->
       <template id="resultsTemplate">
         <h2>Tillykke!</h2>
         <p>Du har lige gennemført quizzen omkring sikre password </p>
@@ -245,8 +252,8 @@
         </div>
         <button>Får dit diplom her</button>
         <div class="results__button-container">
-          <button>Gentag quizzen</button>
-          <button>Tilbage til forside</button>
+          <button class="quizAgainButton">Gentag quizzen</button>
+          <button class="exitQuizButton">Tilbage til forside</button>
         </div>
       </template>
 

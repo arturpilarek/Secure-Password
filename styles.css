@@ -354,7 +354,7 @@ nav li i {
 
 .results-container {
   position: absolute;
-  height: 80vh;
+  height: 70vh;
   width: 30vw;
   left: 0;
   right: 0;
@@ -371,15 +371,66 @@ nav li i {
   font-family: "Poppins";
 }
 
+.results-container p {
+  width: 90%;
+  font-size: 0.9rem;
+}
+
 .results-container h2 {
   color: #3cb145;
-  font-size: 3rem;
-  padding: 1.5rem 0;
+  font-size: 2.5rem;
+  padding: 2rem 0 1rem 0;
 }
 
 .results-container img {
   width: 30%;
   height: auto;
+}
+
+.results-container span {
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0.7rem 0 1.5rem 0;
+}
+
+.results__name-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0 2rem 0;
+}
+
+.results__name-input input {
+  border: 0;
+  border-bottom: 2px solid black;
+  height: min-content;
+  margin-left: 0.5rem;
+}
+
+.results__name-input p {
+  width: 14ch;
+}
+
+.results-container button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.5em 1em;
+  color: white;
+  background-color: #3cb145;
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.results__button-container {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.results__button-container button {
+  background: linear-gradient(#0081f0 0%, #003778 100%);
+  font-size: 1rem;
 }
 
 /* Quiz */

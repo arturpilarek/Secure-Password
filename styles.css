@@ -130,21 +130,6 @@ nav li i {
   width: 0.85em;
 }
 
-@media only screen and (max-width: 800px) {
-  .design {
-    display: none;
-  }
-
-  .vidste-du__section img,
-  .vidste-du__section p {
-    width: 80%;
-  }
-
-  .vidste-du__section {
-    height: 50vh;
-  }
-}
-
 /* JS  */
 .modal {
   display: none;
@@ -602,4 +587,34 @@ footer {
 }
 footer i {
   margin-right: 0.3em;
+}
+
+@media only screen and (max-width: 800px) {
+  .design {
+    display: none;
+  }
+
+  .vidste-du__section img,
+  .vidste-du__section p {
+    width: 80%;
+  }
+
+  .vidste-du__section {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  /* Quiz box */
+
+  .quiz__box {
+    height: 90%;
+    width: 80vh;
+    top: 5px;
+  }
+
+  .results-container__resize {
+    height: 96%;
+    width: 30vw;
+  }
 }

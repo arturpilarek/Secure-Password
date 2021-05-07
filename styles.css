@@ -197,7 +197,7 @@ nav li i {
   padding-top: 1.4rem;
   text-align: center;
   color: #006df0;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .question__content-svar {
@@ -225,7 +225,7 @@ nav li i {
 .quiz__form2 label,
 .quiz__form3 label {
   display: block;
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-weight: 600;
 }
 
@@ -616,5 +616,14 @@ footer i {
   .results-container__resize {
     height: 96%;
     width: 30vw;
+  }
+  .question__content h3 {
+    font-size: 1.2em;
+  }
+
+  .quiz__form label,
+  .quiz__form2 label,
+  .quiz__form3 label {
+    font-size: 1.1em;
   }
 }

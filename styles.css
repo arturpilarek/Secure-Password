@@ -659,4 +659,10 @@ footer i {
   .quiz__form3 label {
     font-size: 1.1em;
   }
+
+  .custom__radio {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
 }

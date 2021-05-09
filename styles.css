@@ -11,8 +11,6 @@ body {
   background-color: white;
 }
 
-/* Nadia */
-
 nav {
   background-color: #006df0;
   display: flex;
@@ -71,7 +69,7 @@ nav li i {
   height: auto;
 }
 
-/* Artur */
+/* Vidste du section */
 
 .vidste-du__section {
   position: relative;
@@ -100,6 +98,8 @@ nav li i {
   width: 50%;
   margin-top: 2em;
 }
+
+/* Bullet design element */
 
 .design {
   background-color: #006df0;
@@ -130,7 +130,7 @@ nav li i {
   width: 0.85em;
 }
 
-/* JS  */
+/* JS modal + overlay */
 .modal {
   display: none;
 }
@@ -215,10 +215,42 @@ nav li i {
   align-items: center;
 }
 
+/* Quiz form + custom radio buttons */
+.custom__radio-input {
+  display: none;
+}
+
+.quiz__box form label {
+  display: flex;
+  align-items: center;
+}
+
+.custom__radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dbbebe;
+  color: white;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-right: 0.5em;
+}
+
+.quiz__box form label:hover .custom__radio {
+  background-color: #006df0;
+}
+
+.custom__radio-input:checked + .custom__radio {
+  background-color: #006df0;
+}
+
 .quiz__form,
 .quiz__form2,
 .quiz__form3 {
-  padding: 4rem 0 4rem 2rem;
+  padding: 4rem 0 4rem 1rem;
 }
 
 .quiz__form label,
@@ -236,7 +268,7 @@ nav li i {
 }
 
 .quiz__form label:first-child {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .question__content {
@@ -261,7 +293,8 @@ nav li i {
   justify-content: center;
   align-items: center;
 }
-/* Question 1 */
+/* Question related styles */
+
 .question1__result,
 .question3__result {
   display: flex;
@@ -288,8 +321,6 @@ nav li i {
   height: auto;
   padding-bottom: 2rem;
 }
-
-/* Question 2 */
 
 .question2__result {
   text-align: center;
@@ -328,15 +359,13 @@ nav li i {
   padding-left: 1rem;
 }
 
-/* Question 3 */
-
-/* Quiz Questions JS */
+/* Hidden class */
 
 .hide {
   display: none;
 }
 
-/* Se results */
+/* Se results JS displayed */
 
 .results-container {
   display: flex;
@@ -415,7 +444,7 @@ nav li i {
   font-size: 1rem;
 }
 
-/* Quiz */
+/* Quiz Section */
 
 .quiz__container {
   display: flex;
@@ -481,7 +510,8 @@ nav li i {
   align-items: center;
 }
 
-/* Sidste side */
+/* Password tjekker */
+
 .passwordtjekker {
   background-color: black;
   display: flex;
@@ -490,6 +520,7 @@ nav li i {
   align-items: center;
   position: relative;
 }
+
 .bundoverskrift {
   color: white;
   margin-top: 3em;
@@ -604,7 +635,7 @@ footer i {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
   /* Quiz box */
 
   .quiz__box {

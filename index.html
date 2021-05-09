@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Security træning</title>
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/7b012a85a9.js"
@@ -77,7 +77,22 @@
         </div>
       </section>
       <section class="quiz__container">
-        <!-- Quiz box, popup -->
+                <!-- Quiz intro section -->
+                <h2  class="quiz__title">Tjek din viden om cyber security</h2>
+
+                <div class="quiz__wrapper">
+                  <p >
+                    Løs quizzen og find ud af om du har styr på sikkerhed omkring
+                    passwords. Læs faktaboksene efter hvert spørgsmål for at få en bedre forståelse omkring
+                    cybersecurity.
+                  </p>
+                  <div class="image__container">
+                    <img class="trophy__image" src="assets/trophy.png" alt="Trophy" />
+                    <!-- knap -->
+                    <div class="knap"  ><a >Start quiz</a></div>
+                  </div>
+                </div>
+        <!-- Quiz box, popup, JS styret -->
         <div id="quiz__box" class="quiz__box">
           <div class="title__container">
             <h2>Cybersecurity quiz</h2>
@@ -90,13 +105,16 @@
             <p class="question__content-svar hide"><strong>Det rigtige svar er: </strong></p> <span class="question__content-svar hide answer1"></span>
           </div>
             <!-- Spørgesmål 1 form -->
-            <form action="" class="quiz__form">
+            <form class="quiz__form">
               <label for="A1">
-                <input type="radio" name="question1" value="A" id="A1" />
+
+                <input type="radio" name="question1" value="A" id="A1" class="custom__radio-input" />
+                <span class="custom__radio">A</span>
                 Sandt</label
               >
               <label for="B1">
-                <input type="radio" name="question1" value="Btrue" id="B1"  />
+                <input type="radio" name="question1" value="Btrue" id="B1" class="custom__radio-input" />
+                <span class="custom__radio">B</span>
                 Falsk</label
               >
               
@@ -104,34 +122,41 @@
              <!-- Spørgesmål 2 form -->
             <form class="quiz__form2 hide">
               <label for="A2">
-                <input type="radio" name="question2" value="A" id="A2" />
+                <input type="radio" name="question2" value="A" id="A2" class="custom__radio-input" />
+                <span class="custom__radio">A</span>
                 Kun bogstaver og tal</label
               >
               <label for="B2">
-                <input type="radio" name="question2" value="B" id="B2"  />
+                <input type="radio" name="question2" value="B" id="B2" class="custom__radio-input" />
+                <span class="custom__radio">B</span>
                 Blanding af store og små bogstaver</label
               >
               <label for="C2">
-                <input type="radio" name="question2" value="C" id="C2"  />
+                <input type="radio" name="question2" value="C" id="C2" class="custom__radio-input" />
+                <span class="custom__radio">C</span>
                 Specialtegn</label
               >
               <label for="D2">
-                <input type="radio" name="question2" value="Dtrue" id="D2"  />
+                <input type="radio" name="question2" value="Dtrue" id="D2" class="custom__radio-input" />
+                <span class="custom__radio">D</span>
                 Alle de ovenstående</label
               >
             </form>
             <!-- Spørgesmål 3 form -->
             <form class="quiz__form3 hide">
               <label for="A3">
-                <input type="radio" name="question3" value="A" id="A3" />
+                <input type="radio" name="question3" value="A" id="A3" class="custom__radio-input" />
+                <span class="custom__radio">A</span>
                 8 tegn</label
               >
               <label for="B3">
-                <input type="radio" name="question3" value="B3true" id="B3"  />
+                <input type="radio" name="question3" value="B3true" id="B3" class="custom__radio-input" />
+                <span class="custom__radio">B</span>
                 Så lang som muligt</label
               >
               <label for="C3">
-                <input type="radio" name="question3" value="C" id="C3"  />
+                <input type="radio" name="question3" value="C" id="C3" class="custom__radio-input" />
+                <span class="custom__radio">C</span>
                 Det er ligemeget</label
               >
             </form>
@@ -190,21 +215,7 @@
         </div>
           </div>
         </div>
-        <!-- Åbn quiz section -->
-        <h2  class="quiz__title">Tjek din viden om cyber security</h2>
 
-        <div class="quiz__wrapper">
-          <p >
-            Løs quizzen og find ud af om du har styr på sikkerhed omkring
-            passwords. Læs faktaboksene efter hvert spørgsmål for at få en bedre forståelse omkring
-            cybersecurity.
-          </p>
-          <div class="image__container">
-            <img class="trophy__image" src="assets/trophy.png" alt="Trophy" />
-            <!-- knap -->
-            <div class="knap"  ><a >Start quiz</a></div>
-          </div>
-        </div>
       </section>
       <!-- Passwordtjekker -->
       <section class="passwordtjekker">
@@ -259,7 +270,5 @@
         <i class="fas fa-people-carry"></i>
         <p class="footertekst">Lavet af Nicoline, Nadia og Artur</p>
       </footer>
-      
-    </div>
   </body>
 </html>

@@ -261,7 +261,7 @@ passwordSubmit.addEventListener("click", () => {
     errorContainer.style.display = "block"
     errorContainer.style.backgroundColor = "#3CB145"
     errorContainer.children[0].innerText =
-      "Tillyke din adganskode leve op til alle krav af sikkert password"
+      "Tillyke din adganskode lever op til alle krav af sikkert password"
   } else {
     errorContainer.style.display = "block"
     errorContainer.style.backgroundColor = "#006df0"
@@ -272,7 +272,7 @@ passwordSubmit.addEventListener("click", () => {
 // Hvis angivet adganskode er kortere end 16 tegn, så tilføj fejl besked til ErrorArray
 function checkLength() {
   if (passwordInput.value.length < 16) {
-    ErrorArray.push("Overvej at bruge flere tegn")
+    ErrorArray.push("Brug minimum 16 tegn")
   }
 }
 
@@ -282,21 +282,21 @@ function checkCharacters() {
     !/[A-Z][a-z]/.test(passwordInput.value) &&
     !/[a-z][A-Z]/.test(passwordInput.value)
   ) {
-    ErrorArray.push("Brug blanding af store og små bogstaver")
+    ErrorArray.push("Brug en blanding af store og små bogstaver")
   }
 }
 
 //  Regex test| Hvis angivet adganskode ikke indeholder specialtegn(ikke ord), så tilføj fejl besked til ErrorArray
 function checkSpecCharacters() {
   if (!/\W/.test(passwordInput.value)) {
-    ErrorArray.push("Overvej at bruge specialtegn")
+    ErrorArray.push("Brug mindst ét specialtegn")
   }
 }
 
 // Regex test| Hvis angivet adganskode ikke indeholder tal, så tilføj fejl besked til ErrorArray
 function checkNumbers() {
   if (!/[0-9]/.test(passwordInput.value)) {
-    ErrorArray.push("Overvej at bruge tal")
+    ErrorArray.push("Brug mindst ét tal")
   }
 }
 
